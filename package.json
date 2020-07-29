@@ -1,6 +1,6 @@
 {
   "name": "yumu-translate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "有道翻译",
   "main": "index.js",
   "bin": {

@@ -6,7 +6,7 @@ const Spinner = require('cli-spinner').Spinner;
 const util = require('../util');
 const { chalk } = require('../util');
 
-const word = '222';
+const word = process.argv[2];
 const isCn = isChinese(word);
 const url = util.getUrl(word, isCn);
 
