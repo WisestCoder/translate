@@ -1,6 +1,9 @@
 ## 命令行翻译工具
 
 ### Demo
+![](https://github.com/wisestcoder/assert/blob/master/yumu_translate_1.jpg)
+
+![](https://github.com/wisestcoder/assert/blob/master/yumu_translate_2.jpg)
 
 ### 安装
 
