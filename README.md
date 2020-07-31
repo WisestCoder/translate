@@ -18,6 +18,7 @@ npm install yumu-translate -g
 - [x] 翻译单词
 - [x] 翻译短语
 - [x] 翻译例句
+- [x] 支持语音翻译（默认开启）
 
 ### 使用
 

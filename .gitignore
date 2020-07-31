@@ -1,3 +1,5 @@
 package-lock.json
 node_modules
 .vscode
+.video
+.DS_Store

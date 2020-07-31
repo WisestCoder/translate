@@ -4,7 +4,6 @@ const cheerio = require('cheerio');
 const isChinese = require('is-chinese');
 const Spinner = require('cli-spinner').Spinner;
 const util = require('../util');
-const { chalk } = require('../util');
 
 const word = process.argv[2];
 const isCn = isChinese(word);
@@ -25,7 +24,11 @@ axios({ url })
     util.logger('关键词', util.getKeyword($, isCn), 'cyan');
     util.logger('短语', util.getPhrase($, isCn), 'magenta');
     util.logger('例句', util.getSentence($, isCn), 'green');
-  }).catch(() => {
+    util.logger();
+
+    util.handleVideo(word, isCn);
+  }).catch((err) => {
     spinner.stop(true);
-    console.log(chalk.red('查询失败，请检查您的网络'));
+    console.log(util.chalk.red(err));
   })
+  
