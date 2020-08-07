@@ -78,7 +78,7 @@ const getUrl = (word, isCn) => {
 }
 
 const getVideoPath = () => {
-  const dir = `${process.cwd()}/.video/`;
+  const dir = path.resolve(__dirname, '.video/');
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
