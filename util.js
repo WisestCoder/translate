@@ -4,7 +4,10 @@ const fs = require('fs');
 const path = require('path');
 const process = require('process');
 const http = require('http');
-const player = require('play-sound')(opts = {})
+const player = require('play-sound')(opts = {});
+const os = require('os');
+
+const HOMEDIR = os.homedir();
 
 /**
  * 获取翻译后的关键词
@@ -78,12 +81,11 @@ const getUrl = (word, isCn) => {
 }
 
 const getVideoPath = () => {
-  const dir = path.resolve(__dirname, '.video/');
+  const dir = path.join(HOMEDIR, '.video');
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
-
-  return path.normalize(`${dir}translate.mp3`)
+  return path.normalize(`${dir}/translate.mp3`)
 };
 
 const deleteVideo = () => {
