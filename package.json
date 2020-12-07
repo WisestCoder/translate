@@ -1,6 +1,6 @@
 {
   "name": "@wisestcoder/translate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "翻译",
   "main": "index.js",
   "bin": {
